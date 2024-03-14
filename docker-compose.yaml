@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql-container:
+    image: mysql:8-debian
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: vaigo
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./SQL/vaigo.sql:/docker-entrypoint-initdb.d/tu_archivo.sql
+      - db_data:/var/lib/mysql
+
+  spring-boot-app:
+    build: .
+    depends_on:
+      - mysql-container
+    ports:
+      - "8888:8888"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/vaigo
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - SERVER_PORT=8888
+      - CORS_ALLOWED_ORIGINS=*
+volumes:
+  db_data:

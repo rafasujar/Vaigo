@@ -1,0 +1,194 @@
+main{
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    height: 86vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main>div{
+    height: 100%;
+}
+
+#perfil{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#perfil hr{
+    height: 110px;
+    margin: 30px;
+}
+
+#perfil > div:first-of-type{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 21.2px;
+    width: 200px;
+}
+
+#perfil > div:first-of-type label{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#cambio{
+    margin: 0px auto;
+    width: 100px;
+    justify-self: center;
+    font-size: 17px;
+}
+
+#cambio:hover{
+    color: rgb(212, 212, 212);
+}
+
+#perfil > div:first-of-type input{
+    width: 10px;
+}
+
+#perfil>h2{
+    text-align: center;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    width: 150px;
+}
+
+#cambiarfoto{
+visibility: hidden;
+}
+
+#perfil > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+#perfil > div:last-of-type>div {
+    display: flex;
+    flex-direction: row;
+}
+#perfil > div:last-of-type>div:nth-child(2){
+margin-top: 10px;
+}
+#perfil > div:last-of-type>div div {
+    display: flex;
+    flex-direction: column;
+
+}
+#perfil > div:last-of-type>div div:first-of-type{
+    margin-right: 30px;
+} 
+
+#perfil > div:last-of-type div input{
+    border-radius: 8px;
+    height: 30px;
+    border-width: 0px;
+}
+
+#perfil > div:last-of-type div label{
+    margin-left: 5px;
+}
+
+.request-historial{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebebee;
+    border-radius: 25px;
+    margin: 30px;
+    margin-top: 40px;
+    color: #000;
+    height: auto;
+    text-align: center;
+}
+hr{
+    margin: 10px;
+}
+.request-historial > div{
+    width: 95%;
+    align-self: center;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.view-historial{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   min-width: 300px;
+   height: 90%;
+   background-color: #f8f6f6;
+   border-radius: 10px;
+   margin-right: 8px;
+   margin-left: 8px;
+}
+
+.view-historial>img{
+    border-radius: 10px 10px 0px 0px;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.view-historial > h3{
+    margin: 5px;
+}
+
+@media (max-width: 1024px){
+    #perfil{
+        margin-top: 130px;
+        flex-direction: column;
+        transform: scale(1.5);
+        margin-bottom: 150px;
+    }
+    #perfil hr{
+        display: none;
+    }
+
+    #perfil>h2{
+        order: 1;
+    }
+
+    #perfil>div:first-of-type{
+        order: 2;
+    }
+
+    #perfil>div:last-of-type{
+        order: 3;
+    }
+}
+
+@media (max-width: 600px){
+    #perfil > div:last-of-type>div{
+        flex-direction: column;
+    }
+    #perfil > div:last-of-type>div div:first-of-type{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #imgperfil{
+        object-fit: contain;
+        width: 300px;
+    }
+
+    #perfil{
+        transform: scale(1.3);
+        height: 40%;
+    }
+
+}
+#imgperfil{
+    object-fit: contain;
+    width: 130px;
+}

@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+#primero{
+    display: flex;
+    color: #ebebeb;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    margin: 0 auto;    
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labels input{
+    height: 30px;
+    width: 230px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+main button{
+    border-style: none;
+    color: #ebebeb;
+    background-color: rgb(34, 33, 33);
+    padding: 18px;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+main button:hover{
+    transform: scale(1.03);
+    transition-duration: 0.3s;
+    background-color: rgb(62, 62, 62);
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.separacion{
+    display: flex;
+    height: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+#primero p a{
+    color: #ebebeb;
+}
+
+#primero p a:hover{
+    color: #b9b8b8;
+}
+
+#primero div:last-of-type{
+    border-radius: 50px;
+}
+
+#primero div:last-of-type span{
+    font-size: 14px;
+}
+
+@media(min-height:633px){
+    main{
+        height: 86vh;
+    }
+}
+
+@media(min-width:1200px){
+    main{
+        overflow-y: auto;
+        height: 86vh;
+    }
+    #primero{
+        height: 86vh;
+    }
+}
+
+@media(max-width: 700px){
+    #primero{
+        color: #ebebeb;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .abcRioButtonBlue{
+        border-radius: 50px;
+    }
+    #not_signed_in4rq5y0mm1ue9{
+        font-size: 14px;
+    }
+}
